@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import {FormattedMessage} from 'react-intl';
 
 import musicIconURL from './music/music.png';
 import musicInsetIconURL from './music/music-small.svg';
@@ -63,6 +63,9 @@ import urltxtInsetIconURL from './urltxt/clound-small.png';
 import rwGoogleImage from './rwgoogle/rwgoogle.png';
 import rwGoogleInsetIconURL from './rwgoogle/clound-small.png';
 
+import knnalgorithmImage from './knnAlgorithm/knnAlgorithm.png';
+import knnalgorithmInsetImage from './knnAlgorithm/knnAlgorithm-small.svg';
+
 import webserialArduinoImage from './webserialArduino/webserialArduino.png';
 import webserialArduinoInsetIconURL from './webserialArduino/webserialArduino-small.png';
 
@@ -72,14 +75,8 @@ import webserialEsp8266InsetIconURL from './webserialEsp8266/webserialEsp-small.
 import webserialEsp32Image from './webserialEsp32/webserialEsp32.png';
 import webserialEsp32InsetIconURL from './webserialEsp32/webserialEsp-small.png';
 
-import webserialPicoboardImage from './webserialPicoboard/webserialPicoboard.png';
-import webserialPicoboardInsetIconURL from './webserialPicoboard/webserialPicoboard-small.png';
-
 import mqttImage from './mqtt/mqtt.png';
 import mqttInsetIconURL from './mqtt/mqtt-small.png';
-
-import linenotifyImage from './linenotify/linenotify.svg';
-import linenotifyInsetIconURL from './linenotify/linenotify_small.svg';
 
 import ml2scratchIconURL from './ml2scratch/ml2scratch.png';
 import ml2scratchInsetIconURL from './ml2scratch/ml2scratch-small.png';
@@ -90,31 +87,8 @@ import posenet2scratchInsetIconURL from './posenet2scratch/posenet2scratch-small
 import tm2scratchIconURL from './tm2scratch/tm2scratch.png';
 import tm2scratchInsetIconURL from './tm2scratch/tm2scratch-small.png';
 
-let formatMessage = messageData => messageData.defaultMessage;
-import microbitMoreIconURL from './microbitMore/entry-icon.png';
-import microbitMoreInsetIconURL from './microbitMore/inset-icon.svg';
-import microbitMoreConnectionIconURL from './microbitMore/connection-icon.svg';
-import microbitMoreConnectionSmallIconURL from './microbitMore/connection-small-icon.svg';
-
-const version = 'v2-0.2.4';
-
-const translationMap = {
-    'en': {
-        'gui.extension.microbitMore.description': `Play with all functions of micro:bit. (${version})`
-    },
-    'ja': {
-        'gui.extension.microbitMore.description': `micro:bitのすべての機能で遊ぶ。 (${version})`
-    },
-    'ja-Hira': {
-        'gui.extension.microbitMore.description': `マイクロビットのすべてのきのうであそぶ。 (${version})`
-    },
-    'zh-tw':{
-        'gui.extension.microbitMore.description': `玩轉micro:bit所有功能. (${version})`
-    }
-};
-
-const extensions = [
-   {
+export default [
+    {
         name: (
             <FormattedMessage
                 defaultMessage="Music"
@@ -385,35 +359,35 @@ const extensions = [
         ),
         helpLink: 'https://scratch.mit.edu/vernier'
     }
-    ,
+,
     {
-        name: 'JSON',
-        extensionId: 'gasoJSON',
-        collaborator: 'gasolin,TYiC',
-        iconURL: jsonImage,
-        insetIconURL: jsonInsetIconURL,
-        description: (
-            <FormattedMessage
-                defaultMessage="Fetch JSON."
-                description="Fetch JSON extension"
-                id="gui.extension.gasojson.description"
-            />
-        ),
-        featured: true,
-        disabled: false,
-        // bluetoothRequired: false,
-        internetConnectionRequired: true,
-        // launchPeripheralConnectionFlow: false,
-        useAutoScan: false,
-        helpLink: 'https://github.com/gasolin/scratch3-internet'
+	name: 'JSON',
+    	extensionId: 'gasoJSON',
+    	collaborator: 'gasolin,TYiC',
+    	iconURL: jsonImage,
+    	insetIconURL: jsonInsetIconURL,
+    	description: (
+        	<FormattedMessage
+            	defaultMessage="Fetch JSON."
+            	description="Fetch JSON extension"
+            	id="gui.extension.gasojson.description"
+        	/>
+    	),
+    	featured: true,
+    	disabled: false,
+    	// bluetoothRequired: false,
+    	internetConnectionRequired: true,
+    	// launchPeripheralConnectionFlow: false,
+    	useAutoScan: false,
+    	helpLink: 'https://github.com/gasolin/scratch3-internet'
     },
     {
-        name: 'IFTTT',
-        extensionId: 'gasoIFTTT',
-        collaborator: 'gasolin',
-        iconURL: iftttImage,
-        insetIconURL: iftttInsetIconURL,
-        description: (
+    	name: 'IFTTT',
+	extensionId: 'gasoIFTTT',
+	collaborator: 'gasolin',
+	iconURL: iftttImage,
+	insetIconURL: iftttInsetIconURL,
+	description: (
             <FormattedMessage
                 defaultMessage="IFTTT Webhook"
                 description="IFTTT Webhook extension"
@@ -429,12 +403,12 @@ const extensions = [
         helpLink: 'https://github.com/gasolin/scratch3-internet'
     },
     {
-        name: 'LASS',
-        extensionId: 'gasoLASS',
-        collaborator: 'gasolin',
-        iconURL: lassImage,
-        insetIconURL: lassInsetIconURL,
-        description: (
+  	name: 'LASS',
+	extensionId: 'gasoLASS',
+	collaborator: 'gasolin',
+	iconURL: lassImage,
+	insetIconURL: lassInsetIconURL,
+	description: (
             <FormattedMessage
                 defaultMessage="Fetch LASS."
                 description="Fetch LASS extension"
@@ -450,14 +424,14 @@ const extensions = [
         helpLink: 'https://github.com/gasolin/scratch3-internet'
     },
     {
-        name: 'ThingSpeak',
-        extensionId: 'gasoThingSpeak',
-        collaborator: 'gasolin',
-        iconURL: thingspeakImage,
-        insetIconURL: thingspeakInsetIconURL,
-        description: (
+	name: 'ThingSpeak',
+	extensionId: 'gasoThingSpeak',
+	collaborator: 'gasolin',
+	iconURL: thingspeakImage,
+	insetIconURL: thingspeakInsetIconURL,
+	description: (
             <FormattedMessage
-                defaultMessage="Send data to ThingSpeak."
+                defaultMessage="ThingSpeak"
                 description="ThingSpeak extension"
                 id="gui.extension.gasothingspeak.description"
             />
@@ -471,15 +445,15 @@ const extensions = [
         helpLink: 'https://github.com/gasolin/scratch3-internet'
     },
     {
-        name: 'Speech to Text',
-        extensionId: 'voicetoTEXT',
-        collaborator: 'estea chen',
-        iconURL: voicetotextImage,
-        insetIconURL: voicetotextInsetIconURL,
-        description: (
+	name: 'voicetoTEXT',
+	extensionId: 'voicetoTEXT',
+	collaborator: 'estea chen',
+	iconURL: voicetotextImage,
+	insetIconURL: voicetotextInsetIconURL,
+	description: (
             <FormattedMessage
-                defaultMessage="Convert speech to text."
-                description="Speech To Text extension"
+                defaultMessage="VoiceToText"
+                description="Voice To Text extension"
                 id="gui.extension.voicetotext.description"
             />
         ),
@@ -492,14 +466,14 @@ const extensions = [
         helpLink: 'https://github.com/estea8968/scratch3-internet'
     },
     {
-        name: 'URL & Text File',
-        extensionId: 'urlTXT',
-        collaborator: 'estea chen',
-        iconURL: urltxtImage,
-        insetIconURL: urltxtInsetIconURL,
-        description: (
+	name: 'urlTXT',
+	extensionId: 'urlTXT',
+	collaborator: 'estea chen',
+	iconURL: urltxtImage,
+	insetIconURL: urltxtInsetIconURL,
+	description: (
             <FormattedMessage
-                defaultMessage="Read and write text files and open a URL."
+                defaultMessage="urlTXT"
                 description="get url text data extension"
                 id="gui.extension.urltxt.description"
             />
@@ -512,18 +486,17 @@ const extensions = [
         useAutoScan: false,
         helpLink: 'https://github.com/estea8968/scratch3-internet'
     },
-
+    
     {
-        name: 'Google Sheets',
-        extensionId: 'rwGoogle',
-        collaborator: 'TYiC',
-        iconURL: rwGoogleImage,
-        insetIconURL: rwGoogleInsetIconURL,
-        description: (
+	name: 'rwGoogle',
+	extensionId: 'rwGoogle',
+	collaborator: 'TYiC',
+	iconURL: rwGoogleImage,
+	insetIconURL: rwGoogleInsetIconURL,
+	description: (
             <FormattedMessage
-                defaultMessage="Read and write Google Sheets and Google Forms."
+                defaultMessage="rwGoogle"
                 description="read write google sheets extension"
-
                 id="gui.extension.rwgoogle.description"
             />
         ),
@@ -536,15 +509,31 @@ const extensions = [
         helpLink: 'https://github.com/estea8968/scratch3-internet'
     },
     {
+        name: 'knnAlgorithm',
+        extensionId: 'knnAlgorithm',
+        iconURL: knnalgorithmImage,
+        insetIconURL: knnalgorithmInsetImage,
+	collaborator: 'wwj718 summercar',
+        description: (
+           <FormattedMessage
+               defaultMessage="knn algorithm."
+               description="Description for the 'knn algorithm' extension"
+	       id="gui.extension.knnalgorithm.description"
+           />
+        ),
+        internetConnectionRequired: true,        
+        featured: true,
+        helpLink: 'https://github.com/CodeLabClub/scratch3_knn'
+   },
+   {
         name: 'Web Serial Arduino',
         extensionId: 'webserialArduino',
         collaborator: "estea chen",
-
         iconURL: webserialArduinoImage,
         insetIconURL: webserialArduinoInsetIconURL,
-        description: (
+	description: (
             <FormattedMessage
-                defaultMessage="Connect Arudino and Google Chrome using Web Serial API."
+                defaultMessage="WebSerialArduino chrome only"
                 description="Web serial for the Arduino extension"
                 id="gui.extension.WebSerialArduino.description"
             />
@@ -557,18 +546,18 @@ const extensions = [
 
     },
     {
-        name: 'Web Serial ESP-8266',
+        name: 'Webserial ESP-8266',
         extensionId: 'webserialEsp',
         collaborator: "estea chen",
         iconURL: webserialEsp8266Image,
         insetIconURL: webserialEsp8266InsetIconURL,
         description: (
-            <FormattedMessage
-                defaultMessage="Connect ESP-8266 and Google Chrome with Web Serial API."
-                description="Webserial ESP-8266 extension"
-                id="gui.extension.WebserialEsp.description"
-            />
-        ),
+        	<FormattedMessage
+            	defaultMessage="Webserial ESP-8266"
+            	description="Webserial ESP-8266 extension"
+            	id="gui.extension.WebserialEsp.description"
+        	/>
+    	),
         featured: true,
         disabled: false,
         internetConnectionRequired: true,
@@ -576,37 +565,18 @@ const extensions = [
         helpLink: 'https://sites.google.com/view/scratch-web-serial-api/'
 
     },
+    /*
     {
         name: 'Webserial ESP-32',
         extensionId: 'webserialEsp32',
-        collaborator: "estea chen",
+        collaborator: "Mr. Y's Lab,estea chen",
         iconURL: webserialEsp32Image,
         insetIconURL: webserialEsp32InsetIconURL,
         description: (
-            <FormattedMessage
-                defaultMessage="Webserial ESP-32"
-                description="Webserial ESP-32 extension"
-                id="gui.extension.WebserialEsp32.description"
-            />
-        ),
-        featured: true,
-        disabled: false,
-        internetConnectionRequired: true,
-        bluetoothRequired: false,
-        helpLink: 'https://sites.google.com/view/scratch-web-serial-api/'
-
-    },
-    {
-        name: 'WebSerial Picoboard',
-        extensionId: 'webserialPicoboard',
-        collaborator: "estea chen",
-        iconURL: webserialPicoboardImage,
-        insetIconURL: webserialPicoboardInsetIconURL,
-        description: (
         	<FormattedMessage
-            	defaultMessage="WebSerial Picoboard"
-            	description="WebSerial Picoboard extension"
-            	id="gui.extension.WebSerialPcoboard.description"
+            	defaultMessage="Webserial ESP-32"
+            	description="Webserial ESP-32 extension"
+            	id="gui.extension.WebserialEsp32.description"
         	/>
     	),
         featured: true,
@@ -615,7 +585,7 @@ const extensions = [
         bluetoothRequired: false,
         helpLink: 'https://ys-fang.github.io/OSEP/app/'
 
-    },
+    },*/
     {
         name: 'MQTT',
         extensionId: 'mqtt',
@@ -623,35 +593,12 @@ const extensions = [
         iconURL: mqttImage,
         insetIconURL: mqttInsetIconURL,
         description: (
-            <FormattedMessage
-                defaultMessage="Use MQTT for data transfer."
-                description="MQTT extension"
-                id="gui.extension.Mqtt.description"
-            />
-        ),
-        featured: true,
-
-        disabled: false,
-        internetConnectionRequired: true,
-        bluetoothRequired: false,
-        //helpLink: ''
-
-    },
-    {
-        name: 'LineNotify',
-        extensionId: 'linenotify',
-        collaborator: "estea chen",
-        iconURL: linenotifyImage,
-        insetIconURL: linenotifyInsetIconURL,
-        description: (
-
-            <FormattedMessage
-                defaultMessage="Use Line Notify send message."
-                description="Line Notify extension"
-                id="gui.extension.linenotify.description"
-
-            />
-        ),
+        	<FormattedMessage
+            	defaultMessage="MQTT"
+            	description="MQTT extension"
+            	id="gui.extension.Mqtt.description"
+        	/>
+    	),
         featured: true,
         disabled: false,
         internetConnectionRequired: true,
@@ -667,7 +614,7 @@ const extensions = [
         insetIconURL: ml2scratchInsetIconURL,
         description: (
             <FormattedMessage
-                defaultMessage='Machine learning for Scratch'
+                defaultMessage='ML2Scratch Blocks.'
                 description='ML2Scratch Blocks.'
                 id='gui.extension.ml2scratchblocks.description'
             />
@@ -685,7 +632,7 @@ const extensions = [
         insetIconURL: posenet2scratchInsetIconURL,
         description: (
             <FormattedMessage
-                defaultMessage='Pose detection for Scratch'
+                defaultMessage='PoseNet2Scratch Blocks.'
                 description='PoseNet2Scratch Blocks.'
                 id='gui.extension.posenet2scratchblocks.description'
             />
@@ -703,7 +650,7 @@ const extensions = [
         insetIconURL: tm2scratchInsetIconURL,
         description: (
             <FormattedMessage
-                defaultMessage='Machine learning for images and sound'
+                defaultMessage='画像や音声を学習させよう。'
                 description='画像や音声を学習させよう。'
                 id='gui.extension.tm2scratchblocks.description'
             />
@@ -713,49 +660,5 @@ const extensions = [
         internetConnectionRequired: true,
         bluetoothRequired: false
     },
-    {
-    name: 'Microbit More',
-    extensionId: 'microbitMore',
-    //extensionURL: 'https://microbit-more.github.io/dist/microbitMore.mjs',
-    collaborator: 'Yengawa Lab',
-    iconURL: microbitMoreIconURL,
-    insetIconURL: microbitMoreInsetIconURL,
-    description: (
-            <FormattedMessage
-                defaultMessage= 'Play with all functions of micro:bit.'
-                description= "Description for the 'Microbit More' extension"
-                id= 'gui.extension.microbitMore.description'
-            />
-        ),
-    /*get description () {
-        return formatMessage({
-            defaultMessage: 'Play with all functions of micro:bit.',
-            description: "Description for the 'Microbit More' extension",
-            id: 'gui.extension.microbitMore.description'
-        });
-    },*/
-    featured: true,
-    disabled: false,
-    bluetoothRequired: true,
-    internetConnectionRequired: false,
-    launchPeripheralConnectionFlow: true,
-    useAutoScan: false,
-    connectionIconURL: microbitMoreConnectionIconURL,
-    connectionSmallIconURL: microbitMoreConnectionSmallIconURL,
-    get connectingMessage () {
-        return formatMessage({
-            defaultMessage: 'Connecting',
-            description: 'Message to help people connect to their micro:bit.',
-            id: 'gui.extension.microbit.connectingMessage'
-        });
-    },
-    helpLink: 'https://microbit-more.github.io/',
-    setFormatMessage: formatter => {
-        formatMessage = formatter;
-    },
-    translationMap: translationMap
-  }
 ];
-export {extensions};
-export default extensions;
 

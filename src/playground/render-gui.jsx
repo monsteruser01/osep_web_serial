@@ -11,10 +11,6 @@ const onClickLogo = () => {
     window.location = 'https://sites.google.com/view/scratch-web-serial-api/';
 };
 
-const onClickFirmware = () => {
-    window.location = 'https://estea8968.github.io/osep_web_serial/burn_hex/';
-};
-
 const handleTelemetryModalCancel = () => {
     log('User canceled telemetry modal');
 };

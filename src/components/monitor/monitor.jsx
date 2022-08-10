@@ -108,14 +108,6 @@ const MonitorComponent = props => (
                             id="gui.monitor.contextMenu.export"
                         />
                     </MenuItem>}
-                {props.onHide &&
-                    <BorderedMenuItem onClick={props.onHide}>
-                        <FormattedMessage
-                            defaultMessage="hide"
-                            description="Menu item to hide the monitor"
-                            id="gui.monitor.contextMenu.hide"
-                        />
-                    </BorderedMenuItem>}
             </ContextMenu>
         ), document.body)}
     </ContextMenuTrigger>
@@ -135,7 +127,6 @@ MonitorComponent.propTypes = {
     onDragEnd: PropTypes.func.isRequired,
     onExport: PropTypes.func,
     onImport: PropTypes.func,
-    onHide: PropTypes.func,
     onNextMode: PropTypes.func.isRequired,
     onSetModeToDefault: PropTypes.func,
     onSetModeToLarge: PropTypes.func,
